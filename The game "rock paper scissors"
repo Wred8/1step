@@ -1,0 +1,21 @@
+print("Player 1, choose: rock - 1, scissors - 2, paper - 3")
+q = int(input())
+
+# Check if the input is valid (1, 2, or 3)
+if q not in [1, 2, 3]:
+    print("Invalid input! Please enter a number between 1 and 3.")
+else:
+    print("Player 2, choose: rock - 1, scissors - 2, paper - 3")
+    w = int(input())
+
+    # Check if the input is valid (1, 2, or 3)
+    if w not in [1, 2, 3]:
+        print("Invalid input! Please enter a number between 1 and 3.")
+    else:
+        # Determine the winner based on the inputs
+        if (q == 1 and w == 2) or (q == 2 and w == 3) or (q == 3 and w == 1):
+            print("Player 1 wins!")
+        elif (w == 1 and q == 2) or (w == 2 and q == 3) or (w == 3 and q == 1):
+            print("Player 2 wins!")
+        else:
+            print("It's a tie!")
