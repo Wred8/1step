@@ -1,0 +1,56 @@
+print("Choose a unit of measurement:")
+print("Seconds: 1, Minutes: 2, Hours: 3")
+
+# Input the original unit of measurement
+r = int(input())
+
+if r == 1:
+    print("Seconds")
+elif r == 2:
+    print("Minutes")
+elif r == 3:
+    print("Hours")
+
+print("Quantity:")
+
+# Input the quantity in the chosen unit
+p = int(input())
+
+print("Convert to which unit?")
+print("Seconds: 1, Minutes: 2, Hours: 3")
+
+# Input the target unit of measurement
+z = int(input())
+
+if z == r:
+    print("They are already in these units")
+
+# Converting from seconds to hours
+elif z == 3 and r == 1:
+    print("Quantity in hours:")
+    print(p / 3600)
+
+# Converting from minutes to hours
+elif z == 3 and r == 2:
+    print("Quantity in hours:")
+    print(p / 60)
+
+# Converting from minutes to seconds
+elif z == 1 and r == 2:
+    print("Quantity in seconds:")
+    print(p * 60)
+
+# Converting from hours to seconds
+elif z == 1 and r == 3:
+    print("Quantity in seconds:")
+    print(p * 3600)
+
+# Converting from seconds to minutes
+elif z == 2 and r == 1:
+    print("Quantity in minutes:")
+    print(p / 60)
+
+# Converting from hours to minutes
+elif z == 2 and r == 3:
+    print("Quantity in minutes:")
+    print(p * 60)
