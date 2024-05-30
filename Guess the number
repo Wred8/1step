@@ -1,0 +1,17 @@
+import random
+
+# Generate a random integer between 1 and 10
+q = random.randint(1, 11)
+w = int(1)
+
+while w == 1:
+    print("Guess the number between 1 and 10")
+    e = int(input())
+
+    if e != q:
+        print("You did not guess the number")
+        print("Do you want to play again? 1 - yes, 2 - no")
+        w = int(input())
+    else:
+        print("Congratulations, you guessed the number")
+        break
