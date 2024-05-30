@@ -1,0 +1,40 @@
+def convert_ascii_to_string(ascii_values):
+    # Convert each list of ASCII values back to a word
+    words = [''.join(chr(c) for c in word) for word in ascii_values]
+    print("Reconstructed words:", words)  # Print the list of words
+    # Join the words into a single string with spaces in between
+    joined_string = ' '.join(words)
+    print("Joined string:", joined_string)  # Print the joined string
+    # Reverse the string to get the original input
+    original_string = joined_string[::-1]
+    print("Original input string:", original_string)  # Print the original input string
+
+def get_user_input():
+    print("Enter your ASCII values in the format [[val1, val2, ...], [val1, val2, ...], ...]:")
+    user_input = input()
+    # Use eval to convert the string input to a list of lists of integers
+    ascii_values = eval(user_input)
+    return ascii_values
+
+def code1():
+    ascii_values = get_user_input()
+    convert_ascii_to_string(ascii_values)
+
+def code2():
+    print("Input string")
+    a = input()  # Take input from the user
+    a = a[::-1]  # Reverse the string
+    print(a)  # Print the reversed string
+    d = a.split(sep=' ')  # Split the reversed string by spaces
+    print(d)  # Print the list of split strings
+    # Create a list of ASCII values for each character in each string in the list
+    f = [[ord(c) for c in word] for word in d]
+    print(f)  # Print the list of lists containing ASCII values
+
+choice = input("Enter 1 for text encryption or 2 for text decryption: ")
+if choice == '1':
+    code2()  # Encrypt text
+elif choice == '2':
+    code1()  # Decrypt text
+else:
+    print("Invalid choice")
